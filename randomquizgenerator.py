@@ -19,6 +19,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia',
 'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
+
+
 # Generate 35 quiz files.
 for quizNum in range(35):
     quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
@@ -39,9 +41,6 @@ for quizNum in range(35):
         wrongAnswers = random.sample(wrongAnswers, 3)
         answerOptions = wrongAnswers + [correctAnswer]
         random.shuffle(answerOptions)
-
-        print(correctAnswer)
-        print(wrongAnswers)
 
 # Write the question and the answer options to the quiz file.
         quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
